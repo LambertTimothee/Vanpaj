@@ -8,6 +8,7 @@ function createElement(type, value) {
 }
 
 function createWindow(name, size, detail){
+
 	let container = $('<container>',{ id: "window_" + name, class: "windows" });
 	let mainDiv = $('<div>', {id: "windowMainDiv_" + name, class:"windowsMainDiv"});
 	let header = $('<div>', {id: "windowHeader" + name, class:"windowsHeader"});
@@ -21,6 +22,9 @@ function createWindow(name, size, detail){
 	header.append(buttonCont);
 	container.append(header);
 	container.append(mainDiv);
+	if(detail.draggable  == true){
+		container.addClass("draggable");
+	}
 
 	return container;
 }
