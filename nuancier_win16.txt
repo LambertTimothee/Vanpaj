@@ -1,0 +1,7 @@
+-blanc #FFFFFF-   -gris1      #c3c3c3-   -gris2 #828282-   -noir #000000-
+-rose  #FF00FF-   -rosefoncé  #820082-
+-rouge #FF0000-   -rougefoncé #820000-
+-bleu  #0000FF-   -bleufoncé  #000082-
+-cyan  #00FFFF-   -cyanfoncé  #008282-
+-vert  #00FF00-   -vertfoncé  #008200-
+-jaune #FFFF00-   -jaunefoncé #828200-
