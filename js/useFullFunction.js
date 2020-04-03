@@ -26,5 +26,5 @@ function createWindow(name, size, detail){
 }
 
 function cursor(){
-	$("body").css('cursor','url(/Vanpaj/sprites/curseur/curseur_base.png), auto' );
+	$("body").css('cursor','url(/Vanpaj/sprites/curseur/curseur_repos.png), auto' );
 }
