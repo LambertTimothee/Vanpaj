@@ -33,28 +33,28 @@ function moveCursorX(dir){
 }
 
 function popRightClick(){
-	const person = {
-	  isHuman: false,
-	  printIntroduction: function () {
-	    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
-	  }
-	};
 	let currentMousePos = {};
 	currentMousePos.x = event.pageX;
     currentMousePos.y = event.pageY;
-    console.log(currentMousePos)
 	const value = {
 		id: "dropDownList",
-		class: "dropDown",
-		position: "absolute",
-
+		class: "dropdown-content"
 	};
-	console.log(createElement("div",value));
+	let dp = createElement("div",value);
+	dp.css({
+		top: currentMousePos.y, left: currentMousePos.x
+	});
+	let li = $('<li>');
+
+	li.append("<ul>Test</ul>");
+	li.append("<ul>Test1</ul>");
+	li.append("<ul>Test2</ul>");
+	dp.append(li);
+	$("body").append(dp);
 }
 
 
 function createElement(type, value) {
-	console.log(value)
 	let element = $('<'+type+'>');
 	$.each( value, function( key, value ) {
   		element.attr(key, value);
