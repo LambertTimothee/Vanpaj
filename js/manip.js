@@ -1,6 +1,7 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
-$.getJSON( "Save/detail.json", function( data ) {
-	console.log(data);
+let data;
+$.getJSON( "Save/detail.json", function( d ) {
+	data = d;
 });
 $(document).ready(function(){
 
@@ -53,11 +54,10 @@ function popRightClick(){
 		top: currentMousePos.y, left: currentMousePos.x
 	});
 	let ul = $('<ul>');
-
-	ul.append("<li>Crédit</li>");
-	ul.append("<li>Save</li>");
-	ul.append("<li>Save As</li>");
-	ul.append("<li>Import...</li>");
+	$.each( data.contextmenu, function(id,value) {
+  		ul.append("<li>"+value+"</li>");
+	});
+	
 	dp.append(ul);
 	$("body").append(dp);
 }
