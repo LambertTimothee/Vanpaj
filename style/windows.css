@@ -1,0 +1,28 @@
+.windows {
+	background-color: white;
+    height: 28%;
+    width: 36%;
+    position: absolute;
+    	border:1px solid black;
+
+}
+
+.windowsHeader{
+	background-color: lightblue;
+	width: 100%
+	height: 20%;
+
+}
+
+.windowsHeader{
+	background-color: lightblue;
+	width: 100%;
+	height: 20%;
+}
+
+.windowsMainDiv{
+	background-color: grey;
+	width: 100%;
+	height: 80%;
+
+}
