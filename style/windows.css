@@ -1,28 +1,50 @@
 .windows {
-	background-color: white;
-    height: 28%;
-    width: 36%;
-    position: absolute;
-    	border:1px solid black;
+
 
 }
 
 .windowsHeader{
-	background-color: lightblue;
+	background-color: #0000FF;
 	width: 100%
 	height: 20%;
+	align-items: center;
+    display: flex;
+    justify-content: space-between;
 
 }
 
+.windowsHeaderTitle{
+	margin-left: 2%;
+	font-weight: bold;
+	font-size: 3.5em;
+}
+
 .windowsHeader{
-	background-color: lightblue;
-	width: 100%;
-	height: 20%;
+	background-color: #0000FF;
+	width: 50%;
+	height: 5%;
+
+   	box-shadow: 8px 8px 0px #828282, -8px -8px 0px #FFFFFF, -8px 0px 0px #FFFFFF, 8px 0px 0px #828282
 }
 
 .windowsMainDiv{
-	background-color: grey;
-	width: 100%;
-	height: 80%;
+	background-color: #c3c3c3;
+	width: 50%;
+	height: 40%;
+   	box-shadow: 8px 8px 0px  #828282, -8px 0px 0px #FFFFFF;
+}
 
+.windowHeaderButtons{
+	display: flex ;
+	flex-direction: row-reverse ;
+	flex-wrap: nowrap ;
+	justify-content: flex-start ;
+	align-items: center ;
+	align-content: space-around ;
+	height: 100%;
+}
+
+.windowHeaderButton{
+	color: red;
+    margin: 5pt;
 }

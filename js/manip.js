@@ -2,6 +2,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 let data;
 
 $.getJSON( "Save/detail.json", function( d ) {
+	console.log(d)
 	data = d;
 });
 
@@ -12,6 +13,10 @@ $(document).ready(function(){
 
 
 	$( "body" ).keypress(function(event) {
+		const detail = {
+	 		draggable : true
+	 	};
+	 	$("body").append(createWindow("Pr0n", 0, detail));
 		moveCursorX(event.key);
 	});
 	$( "body" ).contextmenu(function() {
@@ -20,10 +25,9 @@ $(document).ready(function(){
 	$( "body" ).click(function() {
 
 	 	$(".dropdown-content").remove();
-	 	$("body").css('cursor','url(/Vanpaj/sprites/curseur/curseur_clic.png), auto' );
+	 	$("body").css('cursor','url(/Vanpaj/graphique/sprites/curseur/curseur_clicable.png), auto' );
 	 	setTimeout(function(){ cursor(); }, 100);
-
-	 	$("body").append(createWindow("Yolo", 0, 0));
+	 	
 	});
 
 
