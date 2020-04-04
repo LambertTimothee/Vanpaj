@@ -13,6 +13,10 @@ $(document).ready(function(){
 
 
 	$( "body" ).keypress(function(event) {
+		const detail = {
+	 		draggable : true
+	 	};
+	 	$("body").append(createWindow("Yolo", 0, detail));
 		moveCursorX(event.key);
 	});
 	$( "body" ).contextmenu(function() {
@@ -23,10 +27,7 @@ $(document).ready(function(){
 	 	$(".dropdown-content").remove();
 	 	$("body").css('cursor','url(/Vanpaj/sprites/curseur/curseur_clicable.png), auto' );
 	 	setTimeout(function(){ cursor(); }, 100);
-	 	const detail = {
-	 		draggable : true
-	 	};
-	 	$("body").append(createWindow("Yolo", 0, detail));
+	 	
 	});
 
 

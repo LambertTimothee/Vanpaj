@@ -1,9 +1,5 @@
 .windows {
-	background-color: white;
-    height: 28%;
-    width: 36%;
-    position: absolute;
-    	border:1px solid black;
+
 
 }
 
@@ -16,13 +12,29 @@
 
 .windowsHeader{
 	background-color: lightblue;
-	width: 100%;
-	height: 20%;
+	width: 50%;
+	height: 5%;
+   	border:1px solid black;
 }
 
 .windowsMainDiv{
 	background-color: grey;
-	width: 100%;
-	height: 80%;
+	width: 50%;
+	height: 40%;
+   	border:1px solid black;
+}
 
+.windowHeaderButtons{
+	display: flex ;
+	flex-direction: row-reverse ;
+	flex-wrap: nowrap ;
+	justify-content: flex-start ;
+	align-items: center ;
+	align-content: space-around ;
+	height: 100%;
+}
+
+.windowHeaderButton{
+background-color: red;
+    margin: 5pt;
 }

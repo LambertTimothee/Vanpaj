@@ -13,9 +13,9 @@ function createWindow(name, size, detail){
 	let mainDiv = $('<div>', {id: "windowMainDiv_" + name, class:"windowsMainDiv"});
 	let header = $('<div>', {id: "windowHeader" + name, class:"windowsHeader"});
 	let buttonCont = $('<div>', {id: "windowHeaderButtons" + name, class:"windowHeaderButtons"});
-	const buttonDel = $('<button>', {id: "windowHeaderButtonsDel" + name, class:"windowHeaderButtonsDel", text:"Test"});
-	const buttonLarge = $('<button>', {id: "windowHeaderButtonsLar" + name, class:"windowHeaderButtonsLar", text:"Lar"});
-	const buttonReduce = $('<button>', {id: "windowHeaderButtonsRed" + name, class:"windowHeaderButtonsRed", text:"Red"});
+	const buttonDel = $('<div>', {id: "windowHeaderButtonsDel" + name, class:"windowHeaderButtonsDel windowHeaderButton", text:"Test"});
+	const buttonLarge = $('<div>', {id: "windowHeaderButtonsLar" + name, class:"windowHeaderButtonsLar windowHeaderButton", text:"Lar"});
+	const buttonReduce = $('<div>', {id: "windowHeaderButtonsRed" + name, class:"windowHeaderButtonsRed windowHeaderButton", text:"Red"});
 	buttonCont.append(buttonReduce);
 	buttonCont.append(buttonLarge);
 	buttonCont.append(buttonDel);
@@ -24,6 +24,7 @@ function createWindow(name, size, detail){
 	container.append(mainDiv);
 	if(detail.draggable  == true){
 		container.addClass("draggable");
+		container.draggable();
 	}
 
 	return container;
