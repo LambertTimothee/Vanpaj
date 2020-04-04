@@ -13,12 +13,18 @@ function createWindow(name, size, detail){
 	let mainDiv = $('<div>', {id: "windowMainDiv_" + name, class:"windowsMainDiv"});
 	let header = $('<div>', {id: "windowHeader" + name, class:"windowsHeader"});
 	let buttonCont = $('<div>', {id: "windowHeaderButtons" + name, class:"windowHeaderButtons"});
-	const buttonDel = $('<div>', {id: "windowHeaderButtonsDel" + name, class:"windowHeaderButtonsDel windowHeaderButton", text:"Test"});
-	const buttonLarge = $('<div>', {id: "windowHeaderButtonsLar" + name, class:"windowHeaderButtonsLar windowHeaderButton", text:"Lar"});
-	const buttonReduce = $('<div>', {id: "windowHeaderButtonsRed" + name, class:"windowHeaderButtonsRed windowHeaderButton", text:"Red"});
-	buttonCont.append(buttonReduce);
-	buttonCont.append(buttonLarge);
+	const buttonDel = $('<div>', {id: "windowHeaderButtonsDel" + name, class:"windowHeaderButtonsDel windowHeaderButton"});
+	let title = $('<div>', {id: "windowHeaderTitle" + name, class: "windowsHeaderTitle"});
+	const titleText = $('<p>', {text: name});
+	//const buttonLarge = $('<div>', {id: "windowHeaderButtonsLar" + name, class:"windowHeaderButtonsLar windowHeaderButton", text:"Lar"});
+	//const buttonReduce = $('<div>', {id: "windowHeaderButtonsRed" + name, class:"windowHeaderButtonsRed windowHeaderButton", text:"Red"});
+	//buttonCont.append(buttonLarge);
+	//buttonCont.append(buttonReduce);
+
+	buttonDel.append("<span class='ui-icon ui-icon-closethick'></span>")
 	buttonCont.append(buttonDel);
+	title.append(titleText);
+	header.append(title);
 	header.append(buttonCont);
 	container.append(header);
 	container.append(mainDiv);
@@ -31,5 +37,5 @@ function createWindow(name, size, detail){
 }
 
 function cursor(){
-	$("body").css('cursor','url(/Vanpaj/sprites/curseur/curseur_repos.png), auto' );
+	$("body").css('cursor','url(/Vanpaj/graphique/sprites/curseur/curseur_repos.png), auto' );
 }

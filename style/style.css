@@ -1,5 +1,25 @@
-*{padding: 0;
-margin: 0}
+@font-face {
+	font-family: "Command";
+	src: url('../graphique/polices/police8_enter.command_tout.caracteres_italic_bold/EnterCommand.ttf');
+}
+@font-face {
+	font-family: "Command";
+	font-style: italic;
+	src: url('../graphique/polices/police8_enter.command_tout.caracteres_italic_bold/EnterCommand-Italic.ttf');
+}
+@font-face {
+	font-family: "Command";
+	font-weight: bold;
+	src: url('../graphique/polices/police8_enter.command_tout.caracteres_italic_bold/EnterCommand-Bold.ttf');
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "Command", Helvetica, Arial, sans-serif;
+}
+
+
 ul {
     list-style-type: none;
 }
@@ -10,8 +30,8 @@ html, body {
 }
 
 body{
-	background-color: blue;
-	cursor:url/(Vanpaj/sprites/curseur/curseur_base.png), auto;
+	background-color: #008282;
+	cursor:url/(Vanpaj/graphique/sprites/curseur/curseur_base.png), auto;
 
 }
 
